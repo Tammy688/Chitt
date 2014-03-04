@@ -1,28 +1,46 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hi, my name is TJ and I am your customer. Here is what I would
 
-Things you may want to cover:
+like:
 
-* Ruby version
+I would like my own version of twitter. Something scaled down
 
-* System dependencies
+of course, but a place where people can:
 
-* Configuration
+Resources: User Status Comment
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Associations:
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+   * User has many statuses | status belongs to User
+
+   * Status has many comments | User has many comments
+
+   * comments belong to Status | comments belong to User???
+
+
+Tasks:
+
+
+   * It should be built on postgres -d postgresql
+
+   * Login and register an account Devise
+
+
+      * Study Devise
+      * Attach to User
+
+   * Specify a URL to a profile picture somewhere on the web (no need to upload one) ??? url(img src "")
+   * Ability to specify a short status. No longer than 350 characters! entry:string{350} needs a validates on the model
+
+      * How/where will statuses be stored?-resources/associations
+
+   * Ability for other users to reply to that status ??? Disqus
+   * Create a profile page for each user that USERID get route path
+
+      * displays their picture ??? PaperClip Gem
+      * their 10 most recent status updates ??? or .last(10)
+      * how many comments each update has Something with associations??? For now, just show the amount
+
