@@ -1,0 +1,21 @@
+
+<%= form_for(@chittle) do |f| %>
+  <% if @chittle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@chittle.errors.count, "error") %> prohibited this chittle from being saved:</h2>
+
+      <ul>
+      <% @chittle.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :chit_text %><br>
+    <%= f.text_field :chit_text %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

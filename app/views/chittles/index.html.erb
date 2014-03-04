@@ -1,0 +1,27 @@
+<h1>Listing Chittles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Chit text</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @chittles.each do |chittle| %>
+      <tr>
+        <td><%= chittle.chit_text %></td>
+        <td><%= link_to 'Show', chittle %></td>
+        <td><%= link_to 'Edit', edit_chittle_path(chittle) %></td>
+        <td><%= link_to 'Destroy', chittle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Chittle', new_chittle_path %>
