@@ -18,7 +18,7 @@ class ChattersController < ApplicationController
     @chatter = Chatter.new
 
     @chittle_id = params["chittle_id"]
-    @chittle = Chittle.find(@chittle_id)
+  
   end
 
   # GET /chatters/1/edit
