@@ -1,6 +1,5 @@
 class Chittle < ActiveRecord::Base
 	belongs_to :user
-
 	has_many :chatters
 
 	validates_length_of :chit_text, :minimum => 1
