@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-require 'faker'
+Require 'faker'
 
 #create 50 users
 50.times do 
@@ -21,6 +21,14 @@ users.each do |user|
     chittle = Chittle.new(chit_text: Faker::Lorem.words(30).join(" "),
                       user_id: user.id)
     chittle.save
+end
+
+users = User.all
+users.each do |user|
+  12.times do
+    chatter = Chatter.new(chit_response: Faker::Lorem.words(30).join(" "),
+                      user_id: user.id)
+    chatter.save
 end
 
 end
