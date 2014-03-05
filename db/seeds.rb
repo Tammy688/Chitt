@@ -31,8 +31,8 @@ users.each do |user|
     chatter.save
 end
 
-end
+    puts "#{User.count} users created."
+    puts "#{Chittle.count} Chits created."
+    puts "#{Chatter.count} chatters created."
 
-puts "#{User.count} users created."
-puts "#{Chittle.count} Chits created."
-puts "#{Chatter.count} chatter created."
+end
