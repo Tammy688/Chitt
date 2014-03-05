@@ -9,6 +9,7 @@ img {
 // override for the 'Home' navigation link
 .navbar-brand {
   font-size: inherit;
+  font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
   }
 
 // THESE ARE EXAMPLES YOU CAN MODIFY
@@ -17,9 +18,11 @@ img {
 .column {
   @extend .col-md-6;
   @extend .text-center;
+
   }
 .form {
   @extend .col-md-6;
+
   }
 .form-centered {
   @extend .col-md-6;
@@ -34,7 +37,8 @@ img {
 // to make views framework-neutral
 main {
   @extend .container;
-  background-color: #eee;
+  background-color: #DBCCD8;
+  font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
   padding-bottom: 80px;
   width: 100%;
   margin-top: 51px; // accommodate the navbar
