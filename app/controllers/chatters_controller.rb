@@ -16,6 +16,9 @@ class ChattersController < ApplicationController
   # GET /chatters/new
   def new
     @chatter = Chatter.new
+
+    @chittle_id = params["chittle_id"]
+    @chittle = Chittle.find(@chittle_id)
   end
 
   # GET /chatters/1/edit
@@ -26,6 +29,9 @@ class ChattersController < ApplicationController
   # POST /chatters.json
   def create
     @chatter = Chatter.new(chatter_params)
+
+    @chatter.chittle_id = params["chittle_id"]
+    @chatter.user_id = current_user.id 
 
     respond_to do |format|
       if @chatter.save

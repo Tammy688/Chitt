@@ -11,6 +11,9 @@ class ChittlesController < ApplicationController
   # GET /chittles/1
   # GET /chittles/1.json
   def show
+    #get comments for tweets/chittles
+    @chatters = @chittle.chatters
+    @num_chatters = @chatters.count
   end
 
   # GET /chittles/new
