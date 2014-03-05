@@ -40,6 +40,8 @@ gem 'bootstrap-sass'
 gem 'devise'
 
 gem 'faker', '~> 1.2.0' 
+
+gem "paperclip", "~> 4.1"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
