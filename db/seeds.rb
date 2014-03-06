@@ -16,6 +16,13 @@ require 'faker'
   user.save
 end
 
+tb = User.new(email: 'me@tammyllc.com',
+              password: 'test1234',
+              first_name: 'Tammy',
+              last_name: 'Bowen')
+tb.save
+
+
 #create 12 tweets per user
 users = User.all
 users.each do |user|
@@ -23,17 +30,19 @@ users.each do |user|
     chittle = Chittle.new(chit_text: Faker::Lorem.words(30).join(" "),
                       user_id: user.id)
     chittle.save
+  end
 end
 
-# users = User.all
-# users.each do |user|
-#   12.times do
-#     chatter = Chatter.new(chit_response: Faker::Lorem.words(30).join(" "),
-#                       user_id: user.id)
-#     chatter.save
-# end
+chittles = Chittle.all
+chittles.each do |chittle|
+  12.times do
+    chatter = Chatter.new(chit_response: Faker::Lorem.words(30).join(" "),
+                      chittle_id: chittle.id)
+    chatter.save
+  end
+end
 
     puts "#{User.count} users created."
-    # puts "#{Chittle.count} Chits created."
-    # puts "#{Chatter.count} chatters created."
+    puts "#{Chittle.count} Chits created."
+    puts "#{Chatter.count} chatters created."
 

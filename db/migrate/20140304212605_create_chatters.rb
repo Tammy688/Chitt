@@ -1,7 +1,7 @@
 class CreateChatters < ActiveRecord::Migration
   def change
     create_table :chatters do |t|
-      t.string :chit_response
+      t.text :chit_response
 
       t.timestamps
     end
