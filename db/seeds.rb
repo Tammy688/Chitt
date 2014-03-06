@@ -5,12 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Require 'faker'
+require 'faker'
 
 #create 50 users
 50.times do 
   user = User.new(email: Faker::Internet.email, 
-                  password: 'password')
+                  password: 'password',
+                  first_name: Faker::Name.first_name,
+                  last_name: Faker::Name.last_name)
   user.save
 end
 
@@ -35,4 +37,3 @@ end
     puts "#{Chittle.count} Chits created."
     puts "#{Chatter.count} chatters created."
 
-end
