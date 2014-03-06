@@ -25,15 +25,15 @@ users.each do |user|
     chittle.save
 end
 
-users = User.all
-users.each do |user|
-  12.times do
-    chatter = Chatter.new(chit_response: Faker::Lorem.words(30).join(" "),
-                      user_id: user.id)
-    chatter.save
-end
+# users = User.all
+# users.each do |user|
+#   12.times do
+#     chatter = Chatter.new(chit_response: Faker::Lorem.words(30).join(" "),
+#                       user_id: user.id)
+#     chatter.save
+# end
 
     puts "#{User.count} users created."
-    puts "#{Chittle.count} Chits created."
-    puts "#{Chatter.count} chatters created."
+    # puts "#{Chittle.count} Chits created."
+    # puts "#{Chatter.count} chatters created."
 
