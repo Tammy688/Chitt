@@ -35,6 +35,7 @@ class ChattersController < ApplicationController
 
     respond_to do |format|
       if @chatter.save
+        set_num_chatters (chatter_params[:chittle_id])
         format.html { redirect_to @chatter, notice: 'Chatter was successfully created.' }
         format.json { render action: 'show', status: :created, location: @chatter }
       else
