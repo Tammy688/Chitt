@@ -3,6 +3,11 @@
 <p>
   <strong>Chit Text:</strong>
   <%= @chittle.chit_text %>
+ 
+</p>  
+<p>
+  <%= @chittle.user_id %>
+  <%= @chittle.user.email %>
 </p>
 
 <%= link_to 'Edit', edit_chittle_path(@chittle) %> |

@@ -73,6 +73,6 @@ class ChittlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def chittle_params
-      params.require(:chittle).permit(:chit_text)
+      params.require(:chittle).permit(:user_id, :chit_text, :num_chatters)
     end
 end

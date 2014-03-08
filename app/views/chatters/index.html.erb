@@ -14,6 +14,12 @@
     <% @chatters.each do |chatter| %>
       <tr>
         <td><%= chatter.chit_response %></td>
+        <td>    <%= chatter.chittle.id %></td>
+        <td>    <%= chatter.user.id %></td>
+            <% if chatter.user == nil %>
+            <td>Anonymous</td>
+            <% else %>
+            <% end %>
         <td><%= link_to 'Show', chatter %></td>
         <td><%= link_to 'Edit', edit_chatter_path(chatter) %></td>
         <td><%= link_to 'Destroy', chatter, method: :delete, data: { confirm: 'Are you sure?' } %></td>

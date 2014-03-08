@@ -26,7 +26,7 @@ tb.save
 #create 12 tweets per user
 users = User.all
 users.each do |user|
-  12.times do
+  12.times do 
     chittle = Chittle.new(chit_text: Faker::Lorem.words(30).join(" "),
                       user_id: user.id)
     chittle.save
