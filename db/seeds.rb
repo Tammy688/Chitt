@@ -7,8 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 require 'faker'
 
-#create 50 users
-50.times do 
+#create 15 users
+15.times do 
   user = User.new(email: Faker::Internet.email, 
                   password: 'password',
                   first_name: Faker::Name.first_name,
@@ -23,10 +23,10 @@ tb = User.new(email: 'me@tammyllc.com',
 tb.save
 
 
-#create 12 tweets per user
+#create 4 tweets per user
 users = User.all
 users.each do |user|
-  12.times do 
+  4.times do 
     chittle = Chittle.new(chit_text: Faker::Lorem.words(30).join(" "),
                       user_id: user.id)
     chittle.save
@@ -35,7 +35,7 @@ end
 
 chittles = Chittle.all
 chittles.each do |chittle|
-  12.times do
+  4.times do
     chatter = Chatter.new(chit_response: Faker::Lorem.words(30).join(" "),
                       chittle_id: chittle.id)
     chatter.save
