@@ -57,3 +57,4 @@ gem "paperclip", "~> 4.1"
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+ruby "2.1.0"
